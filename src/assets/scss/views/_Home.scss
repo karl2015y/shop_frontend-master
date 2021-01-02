@@ -1,0 +1,128 @@
+.categories {
+  overflow: hidden;
+  margin-top: 10px;
+
+  &__item {
+    background-image: url("./assets/img/ch.jpg");
+    height: 314px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  &__text {
+    color: #111111;
+    margin-bottom: 5px;
+  }
+
+  &__large__item {
+    height: 638px;
+    padding-left: 70px;
+  }
+}
+.set-bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.newproduct {
+  h2 {
+    text-align: center;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      width: 100px;
+      height: 2px;
+      transform: translate(-50%);
+      background-color: black;
+    }
+  }
+  .product {
+    &__item {
+      &__text {
+        text-align: center;
+        h6 a {
+          color: black;
+        }
+        i {
+          color: #e3c02c;
+        }
+      }
+      &__pic {
+        height: 360px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        img{
+          height: 100%;
+        }
+        .product__hover {
+          opacity: 0;
+          transition: opacity 0.3s;
+          bottom: 20px;
+          list-style: none;
+          position: absolute;
+          width: 100%;
+          text-align: center;
+          li {
+            display: inline-block;
+            background-color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 10px;
+            cursor: pointer;
+            a {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: black;
+            }
+          }
+          li:nth-child(1) {
+            transform: translateY(30px);
+            transition: transform 0.3s;
+          }
+          li:nth-child(2) {
+            transform: translateY(35px);
+            transition: transform 0.8s;
+          }
+          li:nth-child(3) {
+            transform: translateY(40px);
+            transition: transform 1s;
+          }
+        }
+      }
+      &:hover {
+        .product__hover {
+          opacity: 1;
+          li:nth-child(1) {
+            transform: translateY(0);
+            transition: transform 0.3s;
+          }
+          li:nth-child(2) {
+            transform: translateY(0);
+            transition: transform 0.8s;
+          }
+          li:nth-child(3) {
+            transform: translateY(0);
+            transition: transform 1s;
+          }
+        }
+      }
+    }
+  }
+}

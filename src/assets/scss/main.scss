@@ -1,0 +1,17 @@
+@import "~bootstrap/scss/functions";
+@import "./helpers/_variables";
+@import "~bootstrap/scss/bootstrap";
+
+// Basic
+@import "./base/basic";
+
+// 元件
+@import "./components/Footer";
+@import "./components/Header";
+
+// 畫面
+@import "./views/Home";
+@import "./views/Shop";
+@import "./views/Login";
+@import "./views/Register";
+@import "./dashboard.scss";
